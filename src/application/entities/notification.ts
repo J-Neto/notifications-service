@@ -1,6 +1,8 @@
+import { Content } from "./content";
+
 export interface NotificationProps {
     recipientId: string;
-    content: string;
+    content: Content;
     category: string;
 
     // Será null quando atualizarmos a notificação, mas este campo não sendo atualizado
@@ -23,11 +25,11 @@ export class Notification {
         return this.props.recipientId;
     }
 
-    public set content(content: string) {
+    public set content(content: Content) {
         this.props.content = content;
     }
 
-    public get content(): string {
+    public get content(): Content {
         return this.props.content;
     }
 
