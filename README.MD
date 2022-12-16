@@ -29,13 +29,29 @@
     3 - Criando o schema do prisma
         * npx prisma init --datasource-provider SQLite
 
+    4 - Dependências para validação de informações vindas das requisições
+        * npm i class-transformer
+        * npm i class-validator
+
 # Coisas úteis que facilitarão a sua vida
 - Ao trabalhar com prisma, busque a extensão do mesmo
 - Para autoformatar o código do prisma, vá em "settings.json", coloque o seguinte:
     * "[prisma]": {
         "editor.formatOnSave": true
       }
+- Para uma verificação mais profunda das tipagens do Typescript, vá em "tsconfig.json" e adicione:
+    * "scrict": true
+    * "strictNullChecks": true
 
 # Como rodar o projeto?
 - Em breve
 
+# Algumas considerações
+    - Tudo relacionado a uma camada externa da aplicação, está na pasta "infra". 
+    - Tudo que dá acesso ao mundo exterior à aplicação.
+        * Banco de dados
+        * Conexão com outras APIs
+        * Rotas
+
+    - Dentro da pasta "application"
+    - Todos os arquivos que são independentes de banco de dados ou qualquer coisa que toque a camda externa
