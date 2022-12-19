@@ -37,6 +37,9 @@
 
     5 - Na hora dos Testes, ir em "package.json" e copiar o conteúdo do "jest": "{ ... }" e criar um arquivo "jest.config.ts" com o conteúdo do "jest"
 
+    6 - Ao habilitar o "strict" do Typescript, ele habilita uma opção em que todas as propriedades da classe precisam ser inicializadas com um contructor. Para evitar isso, faça:
+        * Vá em "tsconfig.json" e adicione "strictPropertyInitialization": false
+
 # Coisas úteis que facilitarão a sua vida
 
 - Ao trabalhar com prisma, busque a extensão do mesmo
