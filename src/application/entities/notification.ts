@@ -9,6 +9,7 @@ export interface NotificationProps {
 
   // Será null quando atualizarmos a notificação, mas este campo não sendo atualizado
   readAt?: Date | null;
+  canceledAt?: Date | null;
   createdAt: Date;
 }
 
@@ -61,6 +62,10 @@ export class Notification {
   }
 
   public get readAt(): Date | null | undefined {
+    return this.props.readAt;
+  }
+
+  public get canceledAt(): Date | null | undefined {
     return this.props.readAt;
   }
 
